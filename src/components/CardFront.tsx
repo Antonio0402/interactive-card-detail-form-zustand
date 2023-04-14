@@ -9,7 +9,8 @@ const CardFront = () => {
         className="col-span-full row-span-full"
       /> */}
       <div
-        className={`col-span-full row-span-full flex flex-col justify-between p-8 bg-contain bg-no-repeat bg-[url("./images/bg-card-front.png")]`}
+        className={`col-span-full row-span-full flex flex-col justify-between p-8 bg-contain bg-no-repeat`}
+        style={{ backgroundImage: "url('./images/bg-card-front.png')" }}
       >
         <div>
           <CardLogo />

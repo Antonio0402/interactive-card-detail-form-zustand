@@ -7,7 +7,8 @@ const CardBack = () => {
         className="max-w-[447px] max-h-[245px] w-auto h-auto"
       /> */}
       <div
-        className={`w-full min-h-full bg-[url("./images/bg-main-mobile.png")] bg-contain bg-no-repeat p-14 text-white font-medium grid place-items-center`}
+        className={`w-full min-h-full bg-contain bg-no-repeat p-14 text-white font-medium grid place-items-center`}
+        style={{ backgroundImage: "url('./images/bg-card-back.png')" }}
       >
         <p className="justify-self-end">000</p>
       </div>

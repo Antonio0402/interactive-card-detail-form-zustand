@@ -33,7 +33,7 @@ export default {
         "card-number": 'var(--tracking-card-number)',
         "card-name": 'var(--tracking-card-name)',
         "thank-you": 'var(--tracking-thank-you)',
-      }
+      },
     },
   },
   plugins: [
