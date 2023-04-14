@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import CardFront from "./components/CardFront";
 import CardBack from "./components/CardBack";
 import images from "./images";
+import { IconInfo } from "./icons";
 import {
   Suspense,
   lazy,
@@ -29,11 +30,6 @@ import { submitPaymentCard } from "./api/submitApi";
 import { AxiosError } from "axios";
 
 const ThankYou = lazy(() => import("./components/ThankYou"));
-const IconInfo = lazy(() =>
-  import("./icons").then((module) => ({
-    default: module.IconInfo,
-  }))
-);
 
 function App() {
   const [isConfirmed, setIsConfirmed] = useState(false);

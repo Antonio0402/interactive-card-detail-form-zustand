@@ -1,10 +1,4 @@
-import { lazy } from "react";
-
-const CardLogo = lazy(() =>
-  import("../icons").then((module) => ({
-    default: module.CardLogo,
-  }))
-);
+import { CardLogo } from "../icons";
 
 const CardFront = () => {
   return (
