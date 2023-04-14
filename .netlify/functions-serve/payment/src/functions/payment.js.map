@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../Users/antonio/Tailwind/interactive-card-detail-form/functions/payment.ts"],
+  "sourceRoot": "/var/folders/bm/bsry_n894459zyz4f6_x7ml40000gp/T/tmp-2595-hZsGPSKPOIUi",
+  "sourcesContent": ["import { Handler, HandlerEvent, HandlerContext } from \"@netlify/functions\";\n\ntype CardInfo = {\n  holder: string,\n  number: string,\n  month: string,\n  year: string;\n  cvc: string;\n}\n\nconst cards = [\n  {\n    id: 1,\n    \"holder\": \"Jane Appleseed\",\n    \"number\": \"1234567891230000\",\n    \"month\": \"04\",\n    \"year\": \"23\",\n    \"cvc\": \"123\"\n  }\n]\n\nconst handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {\n  if (!event.body) {\n    return;\n  }\n  if(event.httpMethod === \"POST\") {\n    const  { holder, number, month, year, cvc  } = JSON.parse(event.body) as CardInfo;\n    \n    for(const card of cards) {\n      if(card.holder === holder && card.number === number && card.month === month) {\n        \n      }\n    }\n  }\n  return {\n    statusCode: 200,\n    body: JSON.stringify(event.body)\n  }\n} \n\nexport { handler };"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAUA,IAAM,QAAQ;AAAA,EACZ;AAAA,IACE,IAAI;AAAA,IACJ,UAAU;AAAA,IACV,UAAU;AAAA,IACV,SAAS;AAAA,IACT,QAAQ;AAAA,IACR,OAAO;AAAA,EACT;AACF;AAEA,IAAM,UAAmB,OAAO,OAAqB,YAA4B;AAC/E,MAAI,CAAC,MAAM,MAAM;AACf;AAAA,EACF;AACA,MAAG,MAAM,eAAe,QAAQ;AAC9B,UAAO,EAAE,QAAQ,QAAQ,OAAO,MAAM,QAAS,KAAK,MAAM,MAAM,IAAI;AAEpE,eAAU,QAAQ,OAAO;AACvB,UAAG,KAAK,WAAW,UAAU,KAAK,WAAW,UAAU,KAAK,UAAU,OAAO;AAAA,MAE7E;AAAA,IACF;AAAA,EACF;AACA,SAAO;AAAA,IACL,YAAY;AAAA,IACZ,MAAM,KAAK,UAAU,MAAM,IAAI;AAAA,EACjC;AACF;",
+  "names": []
+}

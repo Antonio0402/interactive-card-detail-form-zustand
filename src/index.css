@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer base {
+  :root {
+    --error-input: 0deg 100% 66%;
+    --light: 270deg 3% 87%;
+    --secondayr: 279deg 6% 55%;
+    --primary: 278deg 68% 11%;
+
+    --from-gradient: 249deg 99% 64%;
+    --to-gradient: 278deg 94% 30%;
+
+    --ff-primary: "Space Grotesk", sans-serif;
+
+    --fs-300: 0.75rem; /* 12px */
+    --fs-400: 0.6875rem; /* 11px tracking: 0.01em */
+    /* label: 12px tracking: 0.16em;*/
+    --fs-500: 1.125rem; /* 18px */
+    --fs-600: 1.125rem; /* 18px */
+    /* card number: 28px tracking: 0.125em */
+    --fs-700: 1.75rem; /* 28px */
+
+    --tracking-label: 0.16em;
+    --tracking-card-number: 0.125em;
+    --tracking-card-name: 0.01em;
+    --tracking-thank-you: 0.115em;
+  }
+
+  @screen md {
+    :root {
+      --fs-400: 0.9375rem; /* 15px tracking: 0.105em*/
+      --fs-600: 1.75rem; /* 28px tracking: 0.115em*/
+
+      --tracking-card-name: 0.105em;
+    }
+  }
+}
+
+@layer components {
+  .text-btn {
+    @apply text-[length:var(--fs-500)] font-medium;
+  }
+  .text-label {
+    @apply text-[length:var(--fs-300)] font-medium tracking-label uppercase;
+  }
+  .text-input-error {
+    @apply text-[length:var(--fs-300)] text-error font-medium;
+  }
+  .text-card-number {
+    @apply text-[length:var(--fs-600)] text-white font-medium tracking-card-number;
+  }
+  .text-card-name {
+    @apply text-[length:var(--fs-400)] text-white font-medium tracking-card-name;
+  }
+  .text-thank-you {
+    @apply text-[length:var(--fs-700)] font-medium tracking-thank-you;
+  }
+}
