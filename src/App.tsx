@@ -2,6 +2,7 @@ import Btn from "./components/Btn";
 import Footer from "./components/Footer";
 import CardFront from "./components/CardFront";
 import CardBack from "./components/CardBack";
+import images from "./images";
 import {
   Suspense,
   lazy,
@@ -28,7 +29,6 @@ import { submitPaymentCard } from "./api/submitApi";
 import { AxiosError } from "axios";
 
 const ThankYou = lazy(() => import("./components/ThankYou"));
-const images = (await import("./images")).default;
 const IconInfo = lazy(() =>
   import("./icons").then((module) => ({
     default: module.IconInfo,

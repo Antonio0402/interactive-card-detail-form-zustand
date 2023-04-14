@@ -1,10 +1,10 @@
 export default {
   bgCardBack: {
-    src: "bg-card-back.png",
+    src: "./images/bg-card-back.png",
     alt: "background-card-back-image",
   },
   bgCardFront: {
-    src: "bg-card-front.png",
+    src: "./images/bg-card-front.png",
     alt: "background-card-front-image",
   },
   bgMainDesktop: {

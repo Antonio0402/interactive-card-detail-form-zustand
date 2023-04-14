@@ -1,4 +1,10 @@
-const cardLogo = (await import("../icons")).cardLogo;
+import { lazy } from "react";
+
+const CardLogo = lazy(() =>
+  import("../icons").then((module) => ({
+    default: module.CardLogo,
+  }))
+);
 
 const CardFront = () => {
   return (
@@ -11,7 +17,9 @@ const CardFront = () => {
       <div
         className={`col-span-full row-span-full flex flex-col justify-between p-8 bg-contain bg-no-repeat bg-[url("./images/bg-card-front.png")]`}
       >
-        <div>{cardLogo}</div>
+        <div>
+          <CardLogo />
+        </div>
         <div className="grid gap-6">
           <p className="text-card-number">0000 0000 0000 0000</p>
           <div className="flex justify-between">

@@ -1,5 +1,10 @@
+import { lazy } from "react";
 import Btn from "./Btn";
-const IconComplete = (await import("../icons")).IconComplete;
+const IconComplete = lazy(() =>
+  import("../icons").then((module) => ({
+    default: module.IconComplete,
+  }))
+);
 
 const ThankYou = () => {
   return (

@@ -1,4 +1,4 @@
-export const cardLogo = (
+export const CardLogo = () => (
   <svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg">
     <ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff" />
     <path
